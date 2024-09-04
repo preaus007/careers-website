@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Career Website</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+        font-family: "Roboto", sans-serif;
+        background-color: #f4f4f4;
+        color: #333;
+        line-height: 1.6;
+    }
+
+    h1 {
+        text-align: center;
+        color: #0056b3;
+        margin-top: 20px;
+    }
+
+    img {
+        display: block;
+        margin: 0 auto;
+        width: 100%;
+        height: 360px;
+        object-fit: cover;
+    }
+
+    .wrapper {
+      max-width: 720px;
+      margin: 0 auto;
+    }
+
+    h2 {
+        color: #333;
+        text-align: center;
+        margin: 20px 0 10px;
+    }
+
+    .about {
+        margin: 0 20px 20px;
+        text-align: justify;
+    }
+
+    .jobs_container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 5px;
+    } 
+    
+    .job_card {
+        background-color: lightgray;
+        border-radius: 10px;
+        padding: 10px;
+        overflow: hidden;
+    }
+    
+    .job_title {
+        font-size: 24px;
+        color: steelblue;
+    }
+
+    .company_name {
+        font-size: 18px;
+        color: #777;
+    }
+
+    .location, .salary {
+        font-size: 16px;
+        color: #555;
+    }
+
+    .apply_button {
+        padding: 10px 20px;
+        font-size: 16px;
+        color: #fff;
+        background-color: #007bff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        text-decoration: none;
+        transition: background-color 0.3s ease;
+    }
+
+    .apply_button:hover {
+        background-color: #0056b3;
+    }
+
+    .btn {
+        display: block;
+        width: 200px;
+        margin: 20px auto;
+        padding: 10px;
+        font-size: 16px;
+        color: #fff;
+        background-color: #0056b3;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    .btn:hover {
+        background-color: #004494;
+    }    
+  </style>
+</head>
+<body>
+  <h1>Career Opertunities</h1>
+  <img src="https://ca94d25d-898c-4adf-9eea-08966369fa50-00-2eaw62k79wq7g.worf.replit.dev/static/banner.jpg" alt="banner" height="320px">
+  <div class="wrapper">
+    <h2>About</h2>
+    <p class="about">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos, voluptates assumenda. Id mollitia reiciendis repellendus repudiandae. Enim illo id ab, repellendus facere pariatur expedita deserunt esse numquam nostrum, eum distinctio labore cupiditate, maiores quod iste accusamus at. Eos unde, assumenda quibusdam eum distinctio iure consequuntur excepturi magni. Numquam officiis pariatur quidem quae quam ut architecto, nostrum delectus itaque reiciendis quisquam, sed optio. Debitis consequuntur quo veniam blanditiis architecto, doloribus voluptate laudantium unde culpa similique praesentium, assumenda, deserunt delectus libero expedita iusto vitae iste illum dolor tempora aliquam cumque exercitationem. Vel obcaecati non id reiciendis velit, deleniti quia accusamus vitae error!</p>
+    <h2>Job Openings</h2>
+    <div class="jobs_container">
+    {% for job in jobs %}
+      {% include 'jobs.html' %}  
+    {% endfor %}
+    </div>
+    <button class="btn">Contact Us</button>
+  </div>
+</body>
+</html>
